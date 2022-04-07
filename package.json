@@ -1,0 +1,23 @@
+{
+  "name": "xiolblog",
+  "version": "1.0.0",
+  "description": "第一次尝试vuepress创建个人博客",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiol-liang/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiol-liang/docs/issues"
+  },
+  "homepage": "https://github.com/xiol-liang/docs#readme"
+}
