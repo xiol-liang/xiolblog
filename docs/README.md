@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /img/bbs.png
-heroText: XiolBlog
-tagline: 一名前端er的学习博客
+heroText: XiolNote
+tagline: 一名前端er的学习笔记
 actionText: 关于我 →
 actionLink: /me/about #/notes/vuepress/vuepress.html
 features:

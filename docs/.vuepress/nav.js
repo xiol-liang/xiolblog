@@ -5,6 +5,10 @@ module.exports = [
     link: '/resources/website/recommend',
   },
   {
+    text: '个人博客',
+    link: 'https://xiol-liang.github.io/newblog/',
+  },
+  {
     text: '前端学习',
     items: [
       { text: 'HTML&CSS', link: '/front_notes/h5c3/css' },
@@ -50,6 +54,6 @@ module.exports = [
     ]
   },
   {
-    text: 'Github', link: 'https://github.com/xiol-liang/XiolBlog'
+    text: 'Github', link: 'https://github.com/xiol-liang/xiolblog'
   }
 ]
