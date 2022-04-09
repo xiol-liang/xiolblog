@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/bbs.png
+heroImage: /img/logo.png
 heroText: XiolNote
 tagline: 一名前端er的学习笔记
 actionText: 关于我 →

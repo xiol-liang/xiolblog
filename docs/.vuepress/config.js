@@ -3,7 +3,7 @@ module.exports = {
   // 插件：置顶按钮、图片缩放
   plugins: ['@vuepress/back-to-top', '@vuepress/medium-zoom'],
   // 自定义网站 favicon
-  head: [['link', { rel: 'icon', href: '/img/bbs.png' }]],
+  head: [['link', { rel: 'icon', href: '/img/logo.png' }]],
   // 根路径，和仓库名一致
   base: '/xiolblog/',
   // 左上角标题
