@@ -65,6 +65,7 @@
 - [IcoMoon](https://icomoon.io/)
 - [在线制作 ico 图标](https://www.bitbug.net/)
 - [PDF转Word神器](https://pdf2doc.com/zh/)
+- [设计](https://www.chuangkit.com/designtools/designindex?bd_vid=7513978943892972787)
 
 ## 我爱学习
 

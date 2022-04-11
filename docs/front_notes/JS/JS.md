@@ -2,7 +2,7 @@
 
 >推荐书籍：
 > - 《JavaScript权威指南(第六版)》
-> - 《JavaScript高级程序设计（第3版）
+> - 《JavaScript高级程序设计（第3版）》
 > - 《学习JavaScript数据结构与算法第3版》
 >
 >推荐视频：[黑马前端JavaScript基础语法](https://www.bilibili.com/video/BV1Sy4y1C7ha?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click)
