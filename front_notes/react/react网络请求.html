@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React 网络请求 | XiolNote</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/xiolblog/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/xiolblog/assets/css/0.styles.2191e094.css" as="style"><link rel="preload" href="/xiolblog/assets/js/app.7bdb6cc9.js" as="script"><link rel="preload" href="/xiolblog/assets/js/2.43c78d48.js" as="script"><link rel="preload" href="/xiolblog/assets/js/1.12fb8230.js" as="script"><link rel="preload" href="/xiolblog/assets/js/54.b9604bcc.js" as="script"><link rel="prefetch" href="/xiolblog/assets/js/10.d7e2e15a.js"><link rel="prefetch" href="/xiolblog/assets/js/11.18177621.js"><link rel="prefetch" href="/xiolblog/assets/js/12.98dd5cc6.js"><link rel="prefetch" href="/xiolblog/assets/js/13.d4dc4297.js"><link rel="prefetch" href="/xiolblog/assets/js/14.cbfb3f1e.js"><link rel="prefetch" href="/xiolblog/assets/js/15.726a4440.js"><link rel="prefetch" href="/xiolblog/assets/js/16.49bd8f5e.js"><link rel="prefetch" href="/xiolblog/assets/js/17.ea34497f.js"><link rel="prefetch" href="/xiolblog/assets/js/18.824e2882.js"><link rel="prefetch" href="/xiolblog/assets/js/19.6d7a7688.js"><link rel="prefetch" href="/xiolblog/assets/js/20.c4818db8.js"><link rel="prefetch" href="/xiolblog/assets/js/21.142a9626.js"><link rel="prefetch" href="/xiolblog/assets/js/22.aa43dc67.js"><link rel="prefetch" href="/xiolblog/assets/js/23.3a547151.js"><link rel="prefetch" href="/xiolblog/assets/js/24.edb8fa32.js"><link rel="prefetch" href="/xiolblog/assets/js/25.d5b2c6f9.js"><link rel="prefetch" href="/xiolblog/assets/js/26.af90cbf7.js"><link rel="prefetch" href="/xiolblog/assets/js/27.cdba9011.js"><link rel="prefetch" href="/xiolblog/assets/js/28.d85a8c9c.js"><link rel="prefetch" href="/xiolblog/assets/js/29.877af448.js"><link rel="prefetch" href="/xiolblog/assets/js/3.b376ec37.js"><link rel="prefetch" href="/xiolblog/assets/js/30.b071582e.js"><link rel="prefetch" href="/xiolblog/assets/js/31.713d7de5.js"><link rel="prefetch" href="/xiolblog/assets/js/32.8f317e93.js"><link rel="prefetch" href="/xiolblog/assets/js/33.08032e37.js"><link rel="prefetch" href="/xiolblog/assets/js/34.a9e68c61.js"><link rel="prefetch" href="/xiolblog/assets/js/35.4b83a99a.js"><link rel="prefetch" href="/xiolblog/assets/js/36.cb4b8c96.js"><link rel="prefetch" href="/xiolblog/assets/js/37.70ae747a.js"><link rel="prefetch" href="/xiolblog/assets/js/38.65a72afb.js"><link rel="prefetch" href="/xiolblog/assets/js/39.3f01233d.js"><link rel="prefetch" href="/xiolblog/assets/js/4.c8e52880.js"><link rel="prefetch" href="/xiolblog/assets/js/40.f63329ea.js"><link rel="prefetch" href="/xiolblog/assets/js/41.d483926a.js"><link rel="prefetch" href="/xiolblog/assets/js/42.78d8df8e.js"><link rel="prefetch" href="/xiolblog/assets/js/43.583767e2.js"><link rel="prefetch" href="/xiolblog/assets/js/44.0fc2ba52.js"><link rel="prefetch" href="/xiolblog/assets/js/45.de56eef2.js"><link rel="prefetch" href="/xiolblog/assets/js/46.d177b4c8.js"><link rel="prefetch" href="/xiolblog/assets/js/47.c59d8658.js"><link rel="prefetch" href="/xiolblog/assets/js/48.2cd0c32c.js"><link rel="prefetch" href="/xiolblog/assets/js/49.f27f1fcd.js"><link rel="prefetch" href="/xiolblog/assets/js/5.e46361aa.js"><link rel="prefetch" href="/xiolblog/assets/js/50.b0e25436.js"><link rel="prefetch" href="/xiolblog/assets/js/51.bca0093a.js"><link rel="prefetch" href="/xiolblog/assets/js/52.4af4644b.js"><link rel="prefetch" href="/xiolblog/assets/js/53.24c96982.js"><link rel="prefetch" href="/xiolblog/assets/js/55.f44e0b48.js"><link rel="prefetch" href="/xiolblog/assets/js/56.3e49092a.js"><link rel="prefetch" href="/xiolblog/assets/js/57.0c1cee07.js"><link rel="prefetch" href="/xiolblog/assets/js/58.8874c795.js"><link rel="prefetch" href="/xiolblog/assets/js/59.14c652fd.js"><link rel="prefetch" href="/xiolblog/assets/js/6.1a1d3a31.js"><link rel="prefetch" href="/xiolblog/assets/js/60.7ff3c0c1.js"><link rel="prefetch" href="/xiolblog/assets/js/61.e72dab9b.js"><link rel="prefetch" href="/xiolblog/assets/js/62.716c4fdb.js"><link rel="prefetch" href="/xiolblog/assets/js/63.3691f80a.js"><link rel="prefetch" href="/xiolblog/assets/js/64.17bc88f2.js"><link rel="prefetch" href="/xiolblog/assets/js/65.0c25d76d.js"><link rel="prefetch" href="/xiolblog/assets/js/66.30894ba8.js"><link rel="prefetch" href="/xiolblog/assets/js/67.f85b097a.js"><link rel="prefetch" href="/xiolblog/assets/js/68.e01bf813.js"><link rel="prefetch" href="/xiolblog/assets/js/7.6f21ef4b.js"><link rel="prefetch" href="/xiolblog/assets/js/vendors~docsearch.a0f89813.js">
+    <link rel="stylesheet" href="/xiolblog/assets/css/0.styles.2191e094.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/xiolblog/" class="home-link router-link-active"><img src="/xiolblog/img/logo.png" alt="XiolNote" class="logo"> <span class="site-name can-hide">XiolNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/xiolblog/resources/website/recommend.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://xiol-liang.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/less/less.html" class="nav-link">
+  Less
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/JS/JS.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/TS/TypeScript.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/vue/Vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/react/react入门.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/webpack/Webpack基础.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/nodejs/node.html" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/mini-program/base.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/ide/vscode.html" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目 Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目 Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/projects/covid19/Headline/" class="nav-link">
+  COVID-19
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/pink-echarts/headline/" class="nav-link">
+  Echarts数据可视化展板
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymusic/Headline/" class="nav-link">
+  熊熊音乐网
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mybbs/Headline/" class="nav-link">
+  重师校园论坛BBS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymini_program/Headline/" class="nav-link">
+  校园论坛小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Other" class="dropdown-title"><span class="title">Learn Other</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Other" class="mobile-dropdown-title"><span class="title">Learn Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          3D动画制作学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  Maya
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Blender
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Unreal Engine 4
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频剪辑学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  PhotoShop
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Premiere Pro CC
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  After Effects
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiol-liang/xiolblog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/xiolblog/resources/website/recommend.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://xiol-liang.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/less/less.html" class="nav-link">
+  Less
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/JS/JS.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/TS/TypeScript.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/vue/Vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/react/react入门.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/webpack/Webpack基础.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/nodejs/node.html" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/mini-program/base.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/ide/vscode.html" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目 Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目 Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/projects/covid19/Headline/" class="nav-link">
+  COVID-19
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/pink-echarts/headline/" class="nav-link">
+  Echarts数据可视化展板
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymusic/Headline/" class="nav-link">
+  熊熊音乐网
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mybbs/Headline/" class="nav-link">
+  重师校园论坛BBS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymini_program/Headline/" class="nav-link">
+  校园论坛小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Other" class="dropdown-title"><span class="title">Learn Other</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Other" class="mobile-dropdown-title"><span class="title">Learn Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          3D动画制作学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  Maya
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Blender
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Unreal Engine 4
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频剪辑学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  PhotoShop
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Premiere Pro CC
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  After Effects
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiol-liang/xiolblog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/xiolblog/front_notes/react/react入门.html" class="sidebar-link">react入门</a></li><li><a href="/xiolblog/front_notes/react/react面向组件编程.html" class="sidebar-link">react面向组件编程</a></li><li><a href="/xiolblog/front_notes/react/react-cli.html" class="sidebar-link">react脚手架</a></li><li><a href="/xiolblog/front_notes/react/react网络请求.html" class="active sidebar-link">react网络请求</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react网络请求.html#react-脚手架配置代理" class="sidebar-link">React 脚手架配置代理</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react网络请求.html#消息订阅-发布机制" class="sidebar-link">消息订阅-发布机制</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react网络请求.html#github-搜索框案例知识点总结" class="sidebar-link">Github 搜索框案例知识点总结</a></li></ul></li><li><a href="/xiolblog/front_notes/react/react路由.html" class="sidebar-link">react路由</a></li><li><a href="/xiolblog/front_notes/react/react-ui.html" class="sidebar-link">react UI组件库</a></li><li><a href="/xiolblog/front_notes/react/redux.html" class="sidebar-link">redux</a></li><li><a href="/xiolblog/front_notes/react/react-redux.html" class="sidebar-link">react-redux</a></li><li><a href="/xiolblog/front_notes/react/react扩展.html" class="sidebar-link">react扩展</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-网络请求"><a href="#react-网络请求" class="header-anchor">#</a> React 网络请求</h1> <h2 id="react-脚手架配置代理"><a href="#react-脚手架配置代理" class="header-anchor">#</a> React 脚手架配置代理</h2> <p>方法一：</p> <p>在 <code>package.json</code> 文件中进行配置：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token string-property property">&quot;proxy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://localhost:5000&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>优点：配置简单，前端请求资源可不加前缀</li> <li>缺点：不能配置多个代理</li> <li>工作方式：当请求了 3000 端口号（本机）不存在的资源时，就会把请求转发给 5000 端口号服务器</li></ul> <p>方法二：</p> <p>在 <code>src</code> 目录下创建代理配置文件 <code>setupProxy.js</code> ，进行配置：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http-proxy-middleware'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">app</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+    <span class="token comment">//api1是需要转发的请求(所有带有/api1前缀的请求都会转发给5000)</span>
+    <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">'/api1'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token comment">//配置转发目标地址(能返回数据的服务器地址)</span>
+      <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token string">'http://localhost:5000'</span><span class="token punctuation">,</span>
+      <span class="token comment">//控制服务器接收到的请求头中host字段的值</span>
+      <span class="token comment">/*
+      changeOrigin设置为true时，服务器收到的请求头中的host为：localhost:5000
+      changeOrigin设置为false时，服务器收到的请求头中的host为：localhost:3000
+      changeOrigin默认值为false，但一般将changeOrigin改为true
+      */</span>
+      <span class="token literal-property property">changeOrigin</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+      <span class="token comment">//去除请求前缀，保证交给后台服务器的是正常请求地址(必须配置)</span>
+      <span class="token literal-property property">pathRewrite</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'^/api1'</span><span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">'/api2'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token string">'http://localhost:5001'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">changeOrigin</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">pathRewrite</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'^/api2'</span><span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="消息订阅-发布机制"><a href="#消息订阅-发布机制" class="header-anchor">#</a> 消息订阅-发布机制</h2> <p>即 React 中兄弟组件或任意组件之间的通信方式。</p> <p>使用的工具库：<a href="https://www.npmjs.com/package/pubsub-js" target="_blank" rel="noopener noreferrer">PubSubJS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>下载安装 <code>PubSubJS</code> ：<code>npm install pubsub-js --save</code></p> <p>基础用法：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> PubSub <span class="token keyword">from</span> <span class="token string">'pubsub-js'</span>
+
+<span class="token comment">// 订阅消息</span>
+<span class="token keyword">var</span> token <span class="token operator">=</span> PubSub<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">'topic'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">msg<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 发布消息</span>
+PubSub<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">'topic'</span><span class="token punctuation">,</span> <span class="token string">'hello react'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 取消订阅</span>
+PubSub<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="github-搜索框案例知识点总结"><a href="#github-搜索框案例知识点总结" class="header-anchor">#</a> Github 搜索框案例知识点总结</h2> <ol><li><p>设计状态时要考虑全面，例如带有网络请求的组件，要考虑请求失败怎么办。</p></li> <li><p>ES6 知识点：解构赋值 + 重命名</p></li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+
+<span class="token comment">//传统解构赋值</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> a <span class="token punctuation">}</span> <span class="token operator">=</span> obj
+
+<span class="token comment">//连续解构赋值</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token punctuation">{</span> b <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> obj
+
+<span class="token comment">//连续解构赋值 + 重命名</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">b</span><span class="token operator">:</span> value <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> obj
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><ol start="3"><li>消息订阅与发布机制</li></ol> <ul><li>先订阅，再发布（隔空对话）</li> <li>适用于任意组件间通信</li> <li>要在 <code>componentWillUnmount</code> 钩子中取消订阅</li></ul> <ol start="4"><li><code>fetch</code> 发送请求（<strong>关注分离</strong>的设计思想）</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">try</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 先看服务器是否联系得上</span>
+  <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api1/search/users2?q=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>keyWord<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token comment">// 再获取数据</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'请求出错'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/7/2022, 5:09:26 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/xiolblog/front_notes/react/react-cli.html" class="prev">
+        react脚手架
+      </a></span> <span class="next"><a href="/xiolblog/front_notes/react/react路由.html">
+        react路由
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/xiolblog/assets/js/app.7bdb6cc9.js" defer></script><script src="/xiolblog/assets/js/2.43c78d48.js" defer></script><script src="/xiolblog/assets/js/1.12fb8230.js" defer></script><script src="/xiolblog/assets/js/54.b9604bcc.js" defer></script>
+  </body>
+</html>

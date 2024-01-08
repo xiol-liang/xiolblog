@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React 扩展内容 | XiolNote</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/xiolblog/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/xiolblog/assets/css/0.styles.2191e094.css" as="style"><link rel="preload" href="/xiolblog/assets/js/app.7bdb6cc9.js" as="script"><link rel="preload" href="/xiolblog/assets/js/2.43c78d48.js" as="script"><link rel="preload" href="/xiolblog/assets/js/1.12fb8230.js" as="script"><link rel="preload" href="/xiolblog/assets/js/53.24c96982.js" as="script"><link rel="prefetch" href="/xiolblog/assets/js/10.d7e2e15a.js"><link rel="prefetch" href="/xiolblog/assets/js/11.18177621.js"><link rel="prefetch" href="/xiolblog/assets/js/12.98dd5cc6.js"><link rel="prefetch" href="/xiolblog/assets/js/13.d4dc4297.js"><link rel="prefetch" href="/xiolblog/assets/js/14.cbfb3f1e.js"><link rel="prefetch" href="/xiolblog/assets/js/15.726a4440.js"><link rel="prefetch" href="/xiolblog/assets/js/16.49bd8f5e.js"><link rel="prefetch" href="/xiolblog/assets/js/17.ea34497f.js"><link rel="prefetch" href="/xiolblog/assets/js/18.824e2882.js"><link rel="prefetch" href="/xiolblog/assets/js/19.6d7a7688.js"><link rel="prefetch" href="/xiolblog/assets/js/20.c4818db8.js"><link rel="prefetch" href="/xiolblog/assets/js/21.142a9626.js"><link rel="prefetch" href="/xiolblog/assets/js/22.aa43dc67.js"><link rel="prefetch" href="/xiolblog/assets/js/23.3a547151.js"><link rel="prefetch" href="/xiolblog/assets/js/24.edb8fa32.js"><link rel="prefetch" href="/xiolblog/assets/js/25.d5b2c6f9.js"><link rel="prefetch" href="/xiolblog/assets/js/26.af90cbf7.js"><link rel="prefetch" href="/xiolblog/assets/js/27.cdba9011.js"><link rel="prefetch" href="/xiolblog/assets/js/28.d85a8c9c.js"><link rel="prefetch" href="/xiolblog/assets/js/29.877af448.js"><link rel="prefetch" href="/xiolblog/assets/js/3.b376ec37.js"><link rel="prefetch" href="/xiolblog/assets/js/30.b071582e.js"><link rel="prefetch" href="/xiolblog/assets/js/31.713d7de5.js"><link rel="prefetch" href="/xiolblog/assets/js/32.8f317e93.js"><link rel="prefetch" href="/xiolblog/assets/js/33.08032e37.js"><link rel="prefetch" href="/xiolblog/assets/js/34.a9e68c61.js"><link rel="prefetch" href="/xiolblog/assets/js/35.4b83a99a.js"><link rel="prefetch" href="/xiolblog/assets/js/36.cb4b8c96.js"><link rel="prefetch" href="/xiolblog/assets/js/37.70ae747a.js"><link rel="prefetch" href="/xiolblog/assets/js/38.65a72afb.js"><link rel="prefetch" href="/xiolblog/assets/js/39.3f01233d.js"><link rel="prefetch" href="/xiolblog/assets/js/4.c8e52880.js"><link rel="prefetch" href="/xiolblog/assets/js/40.f63329ea.js"><link rel="prefetch" href="/xiolblog/assets/js/41.d483926a.js"><link rel="prefetch" href="/xiolblog/assets/js/42.78d8df8e.js"><link rel="prefetch" href="/xiolblog/assets/js/43.583767e2.js"><link rel="prefetch" href="/xiolblog/assets/js/44.0fc2ba52.js"><link rel="prefetch" href="/xiolblog/assets/js/45.de56eef2.js"><link rel="prefetch" href="/xiolblog/assets/js/46.d177b4c8.js"><link rel="prefetch" href="/xiolblog/assets/js/47.c59d8658.js"><link rel="prefetch" href="/xiolblog/assets/js/48.2cd0c32c.js"><link rel="prefetch" href="/xiolblog/assets/js/49.f27f1fcd.js"><link rel="prefetch" href="/xiolblog/assets/js/5.e46361aa.js"><link rel="prefetch" href="/xiolblog/assets/js/50.b0e25436.js"><link rel="prefetch" href="/xiolblog/assets/js/51.bca0093a.js"><link rel="prefetch" href="/xiolblog/assets/js/52.4af4644b.js"><link rel="prefetch" href="/xiolblog/assets/js/54.b9604bcc.js"><link rel="prefetch" href="/xiolblog/assets/js/55.f44e0b48.js"><link rel="prefetch" href="/xiolblog/assets/js/56.3e49092a.js"><link rel="prefetch" href="/xiolblog/assets/js/57.0c1cee07.js"><link rel="prefetch" href="/xiolblog/assets/js/58.8874c795.js"><link rel="prefetch" href="/xiolblog/assets/js/59.14c652fd.js"><link rel="prefetch" href="/xiolblog/assets/js/6.1a1d3a31.js"><link rel="prefetch" href="/xiolblog/assets/js/60.7ff3c0c1.js"><link rel="prefetch" href="/xiolblog/assets/js/61.e72dab9b.js"><link rel="prefetch" href="/xiolblog/assets/js/62.716c4fdb.js"><link rel="prefetch" href="/xiolblog/assets/js/63.3691f80a.js"><link rel="prefetch" href="/xiolblog/assets/js/64.17bc88f2.js"><link rel="prefetch" href="/xiolblog/assets/js/65.0c25d76d.js"><link rel="prefetch" href="/xiolblog/assets/js/66.30894ba8.js"><link rel="prefetch" href="/xiolblog/assets/js/67.f85b097a.js"><link rel="prefetch" href="/xiolblog/assets/js/68.e01bf813.js"><link rel="prefetch" href="/xiolblog/assets/js/7.6f21ef4b.js"><link rel="prefetch" href="/xiolblog/assets/js/vendors~docsearch.a0f89813.js">
+    <link rel="stylesheet" href="/xiolblog/assets/css/0.styles.2191e094.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/xiolblog/" class="home-link router-link-active"><img src="/xiolblog/img/logo.png" alt="XiolNote" class="logo"> <span class="site-name can-hide">XiolNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/xiolblog/resources/website/recommend.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://xiol-liang.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/less/less.html" class="nav-link">
+  Less
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/JS/JS.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/TS/TypeScript.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/vue/Vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/react/react入门.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/webpack/Webpack基础.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/nodejs/node.html" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/mini-program/base.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/ide/vscode.html" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目 Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目 Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/projects/covid19/Headline/" class="nav-link">
+  COVID-19
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/pink-echarts/headline/" class="nav-link">
+  Echarts数据可视化展板
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymusic/Headline/" class="nav-link">
+  熊熊音乐网
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mybbs/Headline/" class="nav-link">
+  重师校园论坛BBS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymini_program/Headline/" class="nav-link">
+  校园论坛小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Other" class="dropdown-title"><span class="title">Learn Other</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Other" class="mobile-dropdown-title"><span class="title">Learn Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          3D动画制作学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  Maya
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Blender
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Unreal Engine 4
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频剪辑学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  PhotoShop
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Premiere Pro CC
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  After Effects
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiol-liang/xiolblog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/xiolblog/resources/website/recommend.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://xiol-liang.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/less/less.html" class="nav-link">
+  Less
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/JS/JS.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/TS/TypeScript.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/vue/Vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/react/react入门.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/webpack/Webpack基础.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/nodejs/node.html" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/mini-program/base.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/ide/vscode.html" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目 Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目 Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/projects/covid19/Headline/" class="nav-link">
+  COVID-19
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/pink-echarts/headline/" class="nav-link">
+  Echarts数据可视化展板
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymusic/Headline/" class="nav-link">
+  熊熊音乐网
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mybbs/Headline/" class="nav-link">
+  重师校园论坛BBS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymini_program/Headline/" class="nav-link">
+  校园论坛小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Other" class="dropdown-title"><span class="title">Learn Other</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Other" class="mobile-dropdown-title"><span class="title">Learn Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          3D动画制作学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  Maya
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Blender
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Unreal Engine 4
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频剪辑学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  PhotoShop
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Premiere Pro CC
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  After Effects
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiol-liang/xiolblog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/xiolblog/front_notes/react/react入门.html" class="sidebar-link">react入门</a></li><li><a href="/xiolblog/front_notes/react/react面向组件编程.html" class="sidebar-link">react面向组件编程</a></li><li><a href="/xiolblog/front_notes/react/react-cli.html" class="sidebar-link">react脚手架</a></li><li><a href="/xiolblog/front_notes/react/react网络请求.html" class="sidebar-link">react网络请求</a></li><li><a href="/xiolblog/front_notes/react/react路由.html" class="sidebar-link">react路由</a></li><li><a href="/xiolblog/front_notes/react/react-ui.html" class="sidebar-link">react UI组件库</a></li><li><a href="/xiolblog/front_notes/react/redux.html" class="sidebar-link">redux</a></li><li><a href="/xiolblog/front_notes/react/react-redux.html" class="sidebar-link">react-redux</a></li><li><a href="/xiolblog/front_notes/react/react扩展.html" class="active sidebar-link">react扩展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#setstate-更新状态的两种写法" class="sidebar-link">setState 更新状态的两种写法</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#路由组件懒加载-lazyload" class="sidebar-link">路由组件懒加载 lazyLoad</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#react-hook" class="sidebar-link">React Hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#state-hook" class="sidebar-link">State Hook</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#effect-hook" class="sidebar-link">Effect Hook</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#ref-hook" class="sidebar-link">Ref Hook</a></li></ul></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#fragment" class="sidebar-link">Fragment</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#context" class="sidebar-link">Context</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#组件渲染优化" class="sidebar-link">组件渲染优化</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#render-props-插槽" class="sidebar-link">render props (插槽)</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#错误边界" class="sidebar-link">错误边界</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/react/react扩展.html#组件通信方式总结" class="sidebar-link">组件通信方式总结</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-扩展内容"><a href="#react-扩展内容" class="header-anchor">#</a> React 扩展内容</h1> <h2 id="setstate-更新状态的两种写法"><a href="#setstate-更新状态的两种写法" class="header-anchor">#</a> setState 更新状态的两种写法</h2> <p>对象式：<code>setState(stateChange, [callback])</code></p> <ul><li><code>stateChange</code> 为状态改变对象(该对象可以体现出状态的更改)</li> <li><code>callback</code> 是可选的回调函数, 它在状态更新完毕、界面也更新后才被调用</li></ul> <p>函数式：<code>setState(updater, [callback])</code></p> <ul><li>updater 为返回 stateChange 对象的函数。</li> <li>updater 可以接收到 state 和 props。</li></ul> <p>说明：</p> <ul><li>React 状态更新是异步的。下述代码打印的 <code>count</code> 值是上一次的值，而非更新后的。可在第二个参数回调中获取更新后的状态。</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li><code>callback</code> 回调在 <code>componentDidMount</code> 钩子之后执行</li> <li>对象式写法可以看做函数式写法的语法糖</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> state<span class="token punctuation">.</span>count <span class="token operator">+</span> props<span class="token punctuation">.</span>step <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="路由组件懒加载-lazyload"><a href="#路由组件懒加载-lazyload" class="header-anchor">#</a> 路由组件懒加载 lazyLoad</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> lazy<span class="token punctuation">,</span> Suspense <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> Loading <span class="token keyword">from</span> <span class="token string">'./Loading'</span>
+
+<span class="token comment">// 通过 lazy 函数配合 import() 函数动态加载路由组件</span>
+<span class="token comment">// 路由组件代码会被分开打包</span>
+<span class="token keyword">const</span> Home <span class="token operator">=</span> <span class="token function">lazy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./Home'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> About <span class="token operator">=</span> <span class="token function">lazy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./About'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Demo <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Demo 组件<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">&quot;/home&quot;</span><span class="token operator">&gt;</span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">&quot;/about&quot;</span><span class="token operator">&gt;</span>About<span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span>
+
+        <span class="token comment">// 通过 &lt;Suspense&gt; 指定在加载得到路由打包文件前显示一个自定义 Loading 界面</span>
+        <span class="token operator">&lt;</span>Suspense fallback<span class="token operator">=</span><span class="token punctuation">{</span>Loading<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>Switch<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">&quot;/home&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>Home<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">&quot;/about&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>About<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>Switch<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Suspense<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="react-hook"><a href="#react-hook" class="header-anchor">#</a> React Hook</h2> <blockquote><p>Hook 是 React 16.8.0 增加的新特性，让我们能在函数式组件中使用 <code>state</code> 和其他特性</p></blockquote> <h3 id="state-hook"><a href="#state-hook" class="header-anchor">#</a> State Hook</h3> <ul><li><code>State Hook</code> 让函数式组件也可拥有 <code>state</code> 状态。</li> <li>语法：<code>const [Xxx, setXxx] = React.useState(initValue)</code></li> <li><code>useState()</code> 参数：状态初始化值；返回值：包含 2 个元素的数组，分别为状态值和状态更新函数</li> <li><code>setXxx()</code> 的 2 种用法：
+<ul><li><code>setXxx(newValue)</code></li> <li><code>setXxx(value =&gt; newValue)</code></li> <li>注意！新状态值会<strong>覆盖</strong>原状态值！因此若有多个状态，只能多次调用 <code>React.useState</code> ，不能使用对象！</li></ul></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> setName<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'Tom'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token function">setCount</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">count</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="effect-hook"><a href="#effect-hook" class="header-anchor">#</a> Effect Hook</h3> <ul><li><code>Effect Hook</code> 让我们能在函数式组件中执行副作用操作（就是模拟生命周期钩子）</li> <li>副作用操作：发送 Ajax 请求、定时器、手动更改真实 DOM</li> <li><code>Effect Hook</code> 可以模拟三个钩子：<code>componentDidMount</code>、<code>componentDidUpdate</code>、<code>componentWillUnmount</code></li> <li><code>React.useEffect</code> 第一个参数 <code>return</code> 的函数相当于 <code>componentWillUnmount</code> ，若有多个会按顺序执行</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 语法</span>
+React<span class="token punctuation">.</span><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 组件卸载前执行，即 componentWillUnmount 钩子</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>stateValue<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 模拟 componentDidMount</span>
+<span class="token comment">// 第二个参数数组为空，表示不监听任何状态的更新</span>
+<span class="token comment">// 因此只有页面首次渲染会执行输出</span>
+React<span class="token punctuation">.</span><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'DidMount'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'WillUnmount 1'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 模拟全部状态 componentDidUpdate</span>
+<span class="token comment">// 若第二个参数不写，表示监听所有状态的更新</span>
+React<span class="token punctuation">.</span><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'All DidUpdate'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'WillUnmount 2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 模拟部分状态 componentDidUpdate</span>
+<span class="token comment">// 第二个参数数组写上状态，表示只监听这些状态的更新</span>
+React<span class="token punctuation">.</span><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Part DidUpdate'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'WillUnmount 3'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> name<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 若调用 ReactDOM.unmountComponentAtNode(document.getElementById('root'))</span>
+<span class="token comment">// 会输出 WillUnmount 1、2、3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><h3 id="ref-hook"><a href="#ref-hook" class="header-anchor">#</a> Ref Hook</h3> <ul><li><code>Ref Hook</code> 可以在函数式组件存储或查找组件内的标签或其他数据</li> <li>语法：<code>const refContainer = React.useRef()</code></li> <li>保存标签对象的容器，和 <code>React.createRef()</code> 类似，也是专人专用</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> myRef <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">function</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myRef<span class="token punctuation">.</span>current<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> ref<span class="token operator">=</span><span class="token punctuation">{</span>myRef<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>show<span class="token punctuation">}</span><span class="token operator">&gt;</span>展示数据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="fragment"><a href="#fragment" class="header-anchor">#</a> Fragment</h2> <ul><li><code>Fragment</code> 标签本身不会被渲染成一个真实 DOM 标签，有点像 Vue 的 <code>template</code>。</li> <li>用空标签也有相同效果，但是空标签不能传递任何属性，<code>Fragment</code> 标签可以传递 <code>key</code> 属性，遍历时候可用。</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> Fragment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Fragment key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Fragment<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+
+    <span class="token comment">// 或</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="context"><a href="#context" class="header-anchor">#</a> Context</h2> <p>Context 是一种组件间通信方式，常用于祖父组件与子孙组件。实际开发一般不用，一般用 React-Redux</p> <p>用法说明：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">1</span><span class="token punctuation">)</span> 创建Context容器对象：
+<span class="token keyword">const</span> XxxContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token number">2</span><span class="token punctuation">)</span> 渲染子组时，外面包裹xxxContext<span class="token punctuation">.</span>Provider<span class="token punctuation">,</span> 通过value属性给后代组件传递数据：
+<span class="token operator">&lt;</span>XxxContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span>数据<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+  子组件
+<span class="token operator">&lt;</span><span class="token operator">/</span>XxxContext<span class="token punctuation">.</span>Provider<span class="token operator">&gt;</span>
+
+<span class="token number">3</span><span class="token punctuation">)</span> 后代组件读取数据：
+
+<span class="token comment">// 第一种方式：仅适用于类组件</span>
+<span class="token comment">// 声明接收context</span>
+<span class="token keyword">static</span> contextType <span class="token operator">=</span> xxxContext
+<span class="token comment">// 读取context中的value数据</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>context
+
+<span class="token comment">//第二种方式: 可用于函数组件与类组件</span>
+<span class="token operator">&lt;</span>XxxContext<span class="token punctuation">.</span>Consumer<span class="token operator">&gt;</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// value就是context中的value数据</span>
+    <span class="token parameter">value</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+      <span class="token operator">...</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>XxxContext<span class="token punctuation">.</span>Consumer<span class="token operator">&gt;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// context.js</span>
+
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> MyContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> Provider<span class="token punctuation">,</span> Consumer <span class="token punctuation">}</span> <span class="token operator">=</span> MyContext
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// A.jsx</span>
+
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token constant">B</span> <span class="token keyword">from</span> <span class="token string">'./B.jsx'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./context.js'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span> <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> username<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">A</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span>用户名是<span class="token operator">:</span><span class="token punctuation">{</span>username<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> username<span class="token punctuation">,</span> age <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token constant">B</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// B.jsx</span>
+
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token constant">C</span> <span class="token keyword">from</span> <span class="token string">'./C.jsx'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">B</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token constant">C</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// C.jsx</span>
+
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MyContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./context.js'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">C</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> contextType <span class="token operator">=</span> MyContext
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> username<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>context
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">C</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span>
+          从<span class="token constant">A</span><span class="token literal-property property">组件接收到的用户名</span><span class="token operator">:</span><span class="token punctuation">{</span>username<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token literal-property property">年龄</span><span class="token operator">:</span><span class="token punctuation">{</span>age<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// C.jsx 为函数式组件</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Consumer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./context.js'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token constant">C</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>我是<span class="token constant">C</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span>
+        从<span class="token constant">A</span><span class="token literal-property property">组件接收到的用户名</span><span class="token operator">:</span>
+        <span class="token operator">&lt;</span>Consumer<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token punctuation">.</span>username<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,年龄是</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token punctuation">.</span>age<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Consumer<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="组件渲染优化"><a href="#组件渲染优化" class="header-anchor">#</a> 组件渲染优化</h2> <p>问题：</p> <ul><li>只要调用 <code>setState()</code> ，即使没有修改状态，组件也会重新 <code>render()</code></li> <li>只要父组件重新渲染，即使子组件没有使用父组件的状态，也会重新 <code>render()</code></li></ul> <p>原因：</p> <ul><li><code>shouldComponentUpdate()</code> 钩子默认总是返回 <code>true</code></li></ul> <p>改进：</p> <ul><li>只有组件的 <code>state</code> 或 <code>props</code> 的数据发生改变时才重新渲染</li></ul> <p>方式：</p> <ol><li>手动重写 <code>shouldComponentUpdate(nextProps, nextState)</code> 的逻辑，只有数据发生改变才返回 <code>true</code></li> <li>使用 <code>PureComponent</code> ，它重写了 <code>shouldComponentUpdate()</code> ， 只有 <code>state</code> 或 <code>props</code> 数据有变化才返回 <code>true</code></li></ol> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>它只是进行 <code>state</code> 和 <code>props</code> 数据的浅比较, 如果只是数据对象内部数据变了, 返回 <code>false</code>。即对于引用数据类型，比较的是地址引用</li> <li>不要直接修改 <code>state</code> 数据, 而是要产生新数据</li></ul></div> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> PureComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  <span class="token function-variable function">addStu</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 不会渲染</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> stus <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
+    stus<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">'小刘'</span><span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> stus <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 重新渲染</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> stus <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">stus</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'小刘'</span><span class="token punctuation">,</span> <span class="token operator">...</span>stus<span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="render-props-插槽"><a href="#render-props-插槽" class="header-anchor">#</a> render props (插槽)</h2> <blockquote><p>类似于 Vue 中的插槽技术</p></blockquote> <p>如何向组件内部动态传入带内容的结构（即标签或组件）？</p> <ul><li>Vue：插槽技术</li> <li>React：
+<ul><li>使用 <code>children props</code>：通过组件标签体传入结构</li> <li>使用 <code>render props</code>：通过组件标签属性传入结构，可携带数据</li></ul></li></ul> <p><code>children props</code> 方式：</p> <ul><li>组件标签体内容会存储到 <code>this.props.children</code> 中</li> <li>缺点：A 组件无法向 B 组件传递数据</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Parent组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token constant">A</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token constant">B</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token constant">A</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'tom'</span> <span class="token punctuation">}</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">A</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">B</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p><code>render props</code> 方式：</p> <ul><li><code>&lt;A render={(name) =&gt; &lt;B name={name} /&gt;} /&gt;</code></li> <li><code>{this.props.render(name)}</code></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>Parent组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token constant">A</span> render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span><span class="token constant">B</span> name<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'tom'</span> <span class="token punctuation">}</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">A</span>组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token constant">B</span>组件<span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h2 id="错误边界"><a href="#错误边界" class="header-anchor">#</a> 错误边界</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>错误边界(Error boundary)：用来捕获后代组件错误，渲染出备用页面。</p> <p>注意：只在生产环境（项目上线）起效</p></div> <p>特点：</p> <ul><li>只能捕获<strong>后代组件生命周期</strong>产生的错误，不能捕获自己组件产生的错误和其他组件在合成事件、定时器中产生的错误</li> <li>简单理解就是只能捕获后代组件生命周期钩子里面代码的错误</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> Child <span class="token keyword">from</span> <span class="token string">'./Child'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">//用于标识子组件是否产生错误</span>
+    <span class="token literal-property property">hasError</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 当子组件出现错误，会触发调用，并携带错误信息</span>
+  <span class="token keyword">static</span> <span class="token function">getDerivedStateFromError</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// render 之前触发</span>
+    <span class="token comment">// 返回新的 state</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">hasError</span><span class="token operator">:</span> error <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidCatch</span><span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> info</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> info<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'此处统计错误，反馈给服务器'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Parent组件<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>hasError <span class="token operator">?</span> <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>网络不稳定，稍后再试<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span> <span class="token operator">:</span> <span class="token operator">&lt;</span>Child <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="组件通信方式总结"><a href="#组件通信方式总结" class="header-anchor">#</a> 组件通信方式总结</h2> <ul><li><code>props</code></li> <li>消息订阅发布：<code>pubs-sub</code></li> <li>集中管理：Redux、dva 等</li> <li><a href="#context">conText</a></li></ul> <p>推荐搭配：</p> <ul><li>父子组件：<code>props</code></li> <li>兄弟组件：消息订阅-发布、集中式管理</li> <li>祖孙组件(跨级组件)：消息订阅-发布、集中式管理、<code>conText</code>(开发用的少，封装插件用的多即 React-Redux)</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/7/2022, 5:09:26 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/xiolblog/front_notes/react/react-redux.html" class="prev">
+        react-redux
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/xiolblog/assets/js/app.7bdb6cc9.js" defer></script><script src="/xiolblog/assets/js/2.43c78d48.js" defer></script><script src="/xiolblog/assets/js/1.12fb8230.js" defer></script><script src="/xiolblog/assets/js/53.24c96982.js" defer></script>
+  </body>
+</html>

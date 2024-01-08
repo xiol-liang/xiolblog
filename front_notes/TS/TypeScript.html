@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>禹神梳理，2小时上手TS（TypeScript） | XiolNote</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/xiolblog/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/xiolblog/assets/css/0.styles.2191e094.css" as="style"><link rel="preload" href="/xiolblog/assets/js/app.7bdb6cc9.js" as="script"><link rel="preload" href="/xiolblog/assets/js/2.43c78d48.js" as="script"><link rel="preload" href="/xiolblog/assets/js/1.12fb8230.js" as="script"><link rel="preload" href="/xiolblog/assets/js/44.0fc2ba52.js" as="script"><link rel="prefetch" href="/xiolblog/assets/js/10.d7e2e15a.js"><link rel="prefetch" href="/xiolblog/assets/js/11.18177621.js"><link rel="prefetch" href="/xiolblog/assets/js/12.98dd5cc6.js"><link rel="prefetch" href="/xiolblog/assets/js/13.d4dc4297.js"><link rel="prefetch" href="/xiolblog/assets/js/14.cbfb3f1e.js"><link rel="prefetch" href="/xiolblog/assets/js/15.726a4440.js"><link rel="prefetch" href="/xiolblog/assets/js/16.49bd8f5e.js"><link rel="prefetch" href="/xiolblog/assets/js/17.ea34497f.js"><link rel="prefetch" href="/xiolblog/assets/js/18.824e2882.js"><link rel="prefetch" href="/xiolblog/assets/js/19.6d7a7688.js"><link rel="prefetch" href="/xiolblog/assets/js/20.c4818db8.js"><link rel="prefetch" href="/xiolblog/assets/js/21.142a9626.js"><link rel="prefetch" href="/xiolblog/assets/js/22.aa43dc67.js"><link rel="prefetch" href="/xiolblog/assets/js/23.3a547151.js"><link rel="prefetch" href="/xiolblog/assets/js/24.edb8fa32.js"><link rel="prefetch" href="/xiolblog/assets/js/25.d5b2c6f9.js"><link rel="prefetch" href="/xiolblog/assets/js/26.af90cbf7.js"><link rel="prefetch" href="/xiolblog/assets/js/27.cdba9011.js"><link rel="prefetch" href="/xiolblog/assets/js/28.d85a8c9c.js"><link rel="prefetch" href="/xiolblog/assets/js/29.877af448.js"><link rel="prefetch" href="/xiolblog/assets/js/3.b376ec37.js"><link rel="prefetch" href="/xiolblog/assets/js/30.b071582e.js"><link rel="prefetch" href="/xiolblog/assets/js/31.713d7de5.js"><link rel="prefetch" href="/xiolblog/assets/js/32.8f317e93.js"><link rel="prefetch" href="/xiolblog/assets/js/33.08032e37.js"><link rel="prefetch" href="/xiolblog/assets/js/34.a9e68c61.js"><link rel="prefetch" href="/xiolblog/assets/js/35.4b83a99a.js"><link rel="prefetch" href="/xiolblog/assets/js/36.cb4b8c96.js"><link rel="prefetch" href="/xiolblog/assets/js/37.70ae747a.js"><link rel="prefetch" href="/xiolblog/assets/js/38.65a72afb.js"><link rel="prefetch" href="/xiolblog/assets/js/39.3f01233d.js"><link rel="prefetch" href="/xiolblog/assets/js/4.c8e52880.js"><link rel="prefetch" href="/xiolblog/assets/js/40.f63329ea.js"><link rel="prefetch" href="/xiolblog/assets/js/41.d483926a.js"><link rel="prefetch" href="/xiolblog/assets/js/42.78d8df8e.js"><link rel="prefetch" href="/xiolblog/assets/js/43.583767e2.js"><link rel="prefetch" href="/xiolblog/assets/js/45.de56eef2.js"><link rel="prefetch" href="/xiolblog/assets/js/46.d177b4c8.js"><link rel="prefetch" href="/xiolblog/assets/js/47.c59d8658.js"><link rel="prefetch" href="/xiolblog/assets/js/48.2cd0c32c.js"><link rel="prefetch" href="/xiolblog/assets/js/49.f27f1fcd.js"><link rel="prefetch" href="/xiolblog/assets/js/5.e46361aa.js"><link rel="prefetch" href="/xiolblog/assets/js/50.b0e25436.js"><link rel="prefetch" href="/xiolblog/assets/js/51.bca0093a.js"><link rel="prefetch" href="/xiolblog/assets/js/52.4af4644b.js"><link rel="prefetch" href="/xiolblog/assets/js/53.24c96982.js"><link rel="prefetch" href="/xiolblog/assets/js/54.b9604bcc.js"><link rel="prefetch" href="/xiolblog/assets/js/55.f44e0b48.js"><link rel="prefetch" href="/xiolblog/assets/js/56.3e49092a.js"><link rel="prefetch" href="/xiolblog/assets/js/57.0c1cee07.js"><link rel="prefetch" href="/xiolblog/assets/js/58.8874c795.js"><link rel="prefetch" href="/xiolblog/assets/js/59.14c652fd.js"><link rel="prefetch" href="/xiolblog/assets/js/6.1a1d3a31.js"><link rel="prefetch" href="/xiolblog/assets/js/60.7ff3c0c1.js"><link rel="prefetch" href="/xiolblog/assets/js/61.e72dab9b.js"><link rel="prefetch" href="/xiolblog/assets/js/62.716c4fdb.js"><link rel="prefetch" href="/xiolblog/assets/js/63.3691f80a.js"><link rel="prefetch" href="/xiolblog/assets/js/64.17bc88f2.js"><link rel="prefetch" href="/xiolblog/assets/js/65.0c25d76d.js"><link rel="prefetch" href="/xiolblog/assets/js/66.30894ba8.js"><link rel="prefetch" href="/xiolblog/assets/js/67.f85b097a.js"><link rel="prefetch" href="/xiolblog/assets/js/68.e01bf813.js"><link rel="prefetch" href="/xiolblog/assets/js/7.6f21ef4b.js"><link rel="prefetch" href="/xiolblog/assets/js/vendors~docsearch.a0f89813.js">
+    <link rel="stylesheet" href="/xiolblog/assets/css/0.styles.2191e094.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/xiolblog/" class="home-link router-link-active"><img src="/xiolblog/img/logo.png" alt="XiolNote" class="logo"> <span class="site-name can-hide">XiolNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/xiolblog/resources/website/recommend.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://xiol-liang.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/less/less.html" class="nav-link">
+  Less
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/JS/JS.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/TS/TypeScript.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/vue/Vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/react/react入门.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/webpack/Webpack基础.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/nodejs/node.html" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/mini-program/base.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/ide/vscode.html" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目 Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目 Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/projects/covid19/Headline/" class="nav-link">
+  COVID-19
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/pink-echarts/headline/" class="nav-link">
+  Echarts数据可视化展板
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymusic/Headline/" class="nav-link">
+  熊熊音乐网
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mybbs/Headline/" class="nav-link">
+  重师校园论坛BBS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymini_program/Headline/" class="nav-link">
+  校园论坛小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Other" class="dropdown-title"><span class="title">Learn Other</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Other" class="mobile-dropdown-title"><span class="title">Learn Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          3D动画制作学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  Maya
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Blender
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Unreal Engine 4
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频剪辑学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  PhotoShop
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Premiere Pro CC
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  After Effects
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiol-liang/xiolblog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/xiolblog/resources/website/recommend.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://xiol-liang.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/less/less.html" class="nav-link">
+  Less
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/JS/JS.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/TS/TypeScript.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/vue/Vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/react/react入门.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/webpack/Webpack基础.html" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/nodejs/node.html" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/mini-program/base.html" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/ide/vscode.html" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/front_notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目 Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目 Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xiolblog/projects/covid19/Headline/" class="nav-link">
+  COVID-19
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/pink-echarts/headline/" class="nav-link">
+  Echarts数据可视化展板
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymusic/Headline/" class="nav-link">
+  熊熊音乐网
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mybbs/Headline/" class="nav-link">
+  重师校园论坛BBS
+</a></li><li class="dropdown-item"><!----> <a href="/xiolblog/projects/mymini_program/Headline/" class="nav-link">
+  校园论坛小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Other" class="dropdown-title"><span class="title">Learn Other</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Other" class="mobile-dropdown-title"><span class="title">Learn Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          3D动画制作学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  Maya
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Blender
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Unreal Engine 4
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频剪辑学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xiolblog/language/chinese/" class="nav-link">
+  PhotoShop
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  Premiere Pro CC
+</a></li><li class="dropdown-subitem"><a href="/xiolblog/language/japanese/" class="nav-link">
+  After Effects
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiol-liang/xiolblog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/xiolblog/front_notes/TS/TypeScript.html" aria-current="page" class="active sidebar-link">TypeScript极速梳理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_1-类型声明" class="sidebar-link">1. 类型声明</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_2-类型推断" class="sidebar-link">2. 类型推断</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_3-类型总览" class="sidebar-link">3. 类型总览</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-常用类型" class="sidebar-link">4. 常⽤类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-1-字面量" class="sidebar-link">4.1. 字⾯量</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-2-any" class="sidebar-link">4.2. any</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-3-unknown" class="sidebar-link">4.3. unknown</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-4-never" class="sidebar-link">4.4. never</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-5-void" class="sidebar-link">4.5. void</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-6-object" class="sidebar-link">4.6. object</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-7-tuple" class="sidebar-link">4.7. tuple</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_4-8-enum" class="sidebar-link">4.8. enum</a></li></ul></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_5-自定义类型" class="sidebar-link">5. ⾃定义类型</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_6-抽象类" class="sidebar-link">6. 抽象类</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_7-接口" class="sidebar-link">7. 接⼝</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_8-属性修饰符" class="sidebar-link">8. 属性修饰符</a></li><li class="sidebar-sub-header"><a href="/xiolblog/front_notes/TS/TypeScript.html#_9-泛型" class="sidebar-link">9. 泛型</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="禹神梳理-2小时上手ts-typescript"><a href="#禹神梳理-2小时上手ts-typescript" class="header-anchor">#</a> 禹神梳理，2小时上手TS（TypeScript）</h1> <p><strong>禹神亲自梳理，如有JavaScript基础，1-2个小时即可上手(效率远超书籍or视频)</strong></p> <ol><li><p>简洁高效：精简繁琐的官方文档，专注于阐述TypeScript的核心概念和实用技巧，从而能够更高效地在实际项目中应用TypeScript。</p></li> <li><p>代码示例：每个技术点都配备了清晰的实例代码，旨在帮助你直观地理解概念，并能够迅速将所学知识应用到实际项目中。</p></li> <li><p>常用技巧：为你集中呈现最常用的TypeScript技巧，让你在实际项目中运用自如，提高开发效率和代码质量。</p></li></ol> <hr> <h2 id="_1-类型声明"><a href="#_1-类型声明" class="header-anchor">#</a> 1. 类型声明</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> string <span class="token comment">//变量a只能存储字符串</span>
+<span class="token keyword">let</span> <span class="token literal-property property">b</span><span class="token operator">:</span> number <span class="token comment">//变量a只能存储数值</span>
+<span class="token keyword">let</span> <span class="token literal-property property">c</span><span class="token operator">:</span> boolean <span class="token comment">//变量a只能存储布尔值</span>
+a <span class="token operator">=</span> <span class="token string">'hello'</span>
+a <span class="token operator">=</span> <span class="token number">100</span> <span class="token comment">//警告：不能将类型“number”分配给类型“string”</span>
+b <span class="token operator">=</span> <span class="token number">666</span>
+b <span class="token operator">=</span> <span class="token string">'你好'</span><span class="token comment">//警告：不能将类型“string”分配给类型“number”</span>
+c <span class="token operator">=</span> <span class="token boolean">true</span>
+c <span class="token operator">=</span> <span class="token number">666</span> <span class="token comment">//警告：不能将类型“number”分配给类型“boolean”</span>
+<span class="token comment">// 参数x必须是数字，参数y也必须是数字，函数返回值也必须是数字</span>
+<span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">x</span><span class="token operator">:</span>number<span class="token punctuation">,</span><span class="token literal-property property">y</span><span class="token operator">:</span>number</span><span class="token punctuation">)</span><span class="token operator">:</span>number<span class="token punctuation">{</span>
+ <span class="token keyword">return</span> x <span class="token operator">+</span> y
+<span class="token punctuation">}</span>
+<span class="token function">demo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span>
+<span class="token function">demo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token string">'200'</span><span class="token punctuation">)</span> <span class="token comment">//警告：类型“string”的参数不能赋给类型“number”的参数</span>
+<span class="token function">demo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">300</span><span class="token punctuation">)</span> <span class="token comment">//警告：应有 2 个参数，但获得 3 个</span>
+<span class="token function">demo</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token comment">//警告：应有 2 个参数，但获得 1 个</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="_2-类型推断"><a href="#_2-类型推断" class="header-anchor">#</a> 2. 类型推断</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> d <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">99</span> <span class="token comment">//TypeScript会推断出变量d的类型是数字</span>
+d <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token comment">//警告：不能将类型“boolean”分配给类型“number</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_3-类型总览"><a href="#_3-类型总览" class="header-anchor">#</a> 3. 类型总览</h2> <p><code>JavaScript</code> 中的数据类型：</p> <blockquote><p><code>string</code> 、 <code>number</code> 、 <code>boolean</code> 、 <code>null</code> 、 <code>undefined</code> 、<code>bigint</code> 、 <code>symbol</code> 、 <code>object</code></p></blockquote> <blockquote><p>备注：其中 <code>object</code> 包含： <code>Array</code> 、 <code>Function</code> 、 <code>Date</code> ......</p></blockquote> <p><code>TypeScript</code> 中的数据类型：</p> <blockquote><ol><li>以上所有</li> <li>四个新类型： <code>void</code> 、 <code>never</code> 、 <code>unknown</code> 、 <code>any</code> 、 <code>enum</code> 、 <code>tuple</code></li> <li>⾃定义类型： <code>type</code> 、 <code>interface</code></li></ol></blockquote> <p><strong>注意点：</strong> <code>JS</code> 中的这三个构造函数： <code>Number</code> 、 <code>String</code> 、 <code>Boolean</code> ，他们只⽤于包装对象，正
+常开发时，很少去使⽤他们，在 <code>TS</code> 中也是同理。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token number">56</span>
+n<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">/*
+当执⾏n.toFixed(2) ，底层做了这⼏件事：
+ 1.let temp = new Number(42)
+ 2.value = temp.toFixed(2)
+ 3.删除value
+ 4.返回value
+*/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>类型总览：</p> <table><thead><tr><th style="text-align:center;">类型</th> <th style="text-align:left;">描述</th> <th style="text-align:left;">举例</th></tr></thead> <tbody><tr><td style="text-align:center;"><code>number</code></td> <td style="text-align:left;">任意数字</td> <td style="text-align:left;"><code>1</code> , <code>-33</code> ,<code>2.5</code></td></tr> <tr><td style="text-align:center;"><code>string</code></td> <td style="text-align:left;">任意字符串</td> <td style="text-align:left;"><code>'hello'</code> , <code>'ok'</code> , <code>'你好'</code></td></tr> <tr><td style="text-align:center;"><code>boolean</code></td> <td style="text-align:left;">布尔值<code>true</code> 或 <code>false</code></td> <td style="text-align:left;"><code>true</code> 、 <code>false</code></td></tr> <tr><td style="text-align:center;"><code>字⾯量</code></td> <td style="text-align:left;">值只能是字⾯量值</td> <td style="text-align:left;">值本身</td></tr> <tr><td style="text-align:center;"><code>any</code></td> <td style="text-align:left;">任意类型</td> <td style="text-align:left;"><code>1</code>、 <code>'hello'</code> 、 <code>true</code> ......</td></tr> <tr><td style="text-align:center;"><code>unknown</code></td> <td style="text-align:left;">类型安全的 <code>any</code></td> <td style="text-align:left;"><code>1</code>、 <code>'hello'</code>、<code>true</code> ......</td></tr> <tr><td style="text-align:center;"><code>never</code></td> <td style="text-align:left;">不能是任何值</td> <td style="text-align:left;">⽆值</td></tr> <tr><td style="text-align:center;"><code>void</code></td> <td style="text-align:left;">空 或 <code>undefined</code></td> <td style="text-align:left;">空 或 <code>undefined</code></td></tr> <tr><td style="text-align:center;"><code>object</code></td> <td style="text-align:left;">任意的 <code>JS</code> 对象</td> <td style="text-align:left;"><code>{name:'张三'}</code></td></tr> <tr><td style="text-align:center;"><code>tuple</code></td> <td style="text-align:left;">元素， <code>TS</code> 新增类型，固定⻓度数组</td> <td style="text-align:left;"><code>[4,5]</code></td></tr> <tr><td style="text-align:center;"><code>enum</code></td> <td style="text-align:left;">枚举， <code>TS</code> 中新增类型</td> <td style="text-align:left;"><code>enum{A, B}</code></td></tr></tbody></table> <h2 id="_4-常用类型"><a href="#_4-常用类型" class="header-anchor">#</a> 4. 常⽤类型</h2> <h3 id="_4-1-字面量"><a href="#_4-1-字面量" class="header-anchor">#</a> 4.1. 字⾯量</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token string">'你好'</span> <span class="token comment">//a的值只能为字符串“你好”</span>
+<span class="token keyword">let</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">100</span> <span class="token comment">//b的值只能为数字100</span>
+a <span class="token operator">=</span> <span class="token string">'欢迎'</span><span class="token comment">//警告：不能将类型“&quot;欢迎&quot;”分配给类型“&quot;你好&quot;”</span>
+b <span class="token operator">=</span> <span class="token number">200</span> <span class="token comment">//警告：不能将类型“200”分配给类型“100”</span>
+<span class="token keyword">let</span> <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">'男'</span><span class="token operator">|</span><span class="token string">'⼥'</span> <span class="token comment">//定义⼀个gender变量，值只能为字符串“男”或“⼥”</span>
+gender <span class="token operator">=</span> <span class="token string">'男'</span>
+gender <span class="token operator">=</span> <span class="token string">'未知'</span> <span class="token comment">//不能将类型“&quot;未知&quot;”分配给类型“&quot;男&quot; | &quot;⼥&quot;”</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_4-2-any"><a href="#_4-2-any" class="header-anchor">#</a> 4.2. any</h3> <p><code>any</code> 的含义是：任意类型，⼀旦将变量类型限制为 <code>any</code> ，那就意味着放弃了对该变量的类型检查。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//明确的表示a的类型是any —— 显式的any</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> any
+<span class="token comment">//以下对a的赋值，均⽆警告</span>
+a <span class="token operator">=</span> <span class="token number">100</span>
+a <span class="token operator">=</span> <span class="token string">'你好'</span>
+a <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token comment">//没有明确的表示b的类型是any，但TS主动推断了出来 —— 隐式的any</span>
+<span class="token keyword">let</span> b
+<span class="token comment">//以下对b的赋值，均⽆警告</span>
+b <span class="token operator">=</span> <span class="token number">100</span>
+b <span class="token operator">=</span> <span class="token string">'你好'</span>
+b <span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>注意点：</strong> any 类型的变量，可以赋值给任意类型的变量</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">/* 注意点：any类型的变量，可以赋值给任意类型的变量 */</span>
+<span class="token keyword">let</span> a
+<span class="token keyword">let</span> <span class="token literal-property property">x</span><span class="token operator">:</span> string
+x <span class="token operator">=</span> a <span class="token comment">// ⽆警告</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_4-3-unknown"><a href="#_4-3-unknown" class="header-anchor">#</a> 4.3. unknown</h3> <p><code>unknown</code> 的含义是：未知类型。</p> <blockquote><p>备注1： <code>unknown</code> 可以理解为⼀个类型安全的 <code>any</code><br>
+备注2： <code>unknown</code> 适⽤于：开始不知道数据的具体类型，后期才能确定数据的类型</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 设置a的类型为unknown</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> unknown
+<span class="token comment">//以下对a的赋值，均正常</span>
+a <span class="token operator">=</span> <span class="token number">100</span>
+a <span class="token operator">=</span> <span class="token boolean">false</span>
+a <span class="token operator">=</span> <span class="token string">'你好'</span>
+<span class="token comment">// 设置x的数据类型为string</span>
+<span class="token keyword">let</span> <span class="token literal-property property">x</span><span class="token operator">:</span> string
+x <span class="token operator">=</span> a <span class="token comment">//警告：不能将类型“unknown”分配给类型“string”</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>若就是想把 a 赋值给 x ，可以⽤以下三种写法：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 设置a的类型为unknown</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> unknown
+a <span class="token operator">=</span> <span class="token string">'hello'</span>
+<span class="token comment">//第⼀种⽅式：加类型判断</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ x <span class="token operator">=</span> a
+<span class="token punctuation">}</span>
+<span class="token comment">//第⼆种⽅式：加断⾔</span>
+x <span class="token operator">=</span> a <span class="token keyword">as</span> string
+<span class="token comment">//第三种⽅式：加断⾔</span>
+x <span class="token operator">=</span> <span class="token operator">&lt;</span>string<span class="token operator">&gt;</span>a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><code>any</code> 后点任何的东⻄都不会报错，⽽ <code>unknown</code> 正好与之相反。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">str1</span><span class="token operator">:</span> string <span class="token operator">=</span> <span class="token string">'hello'</span>
+str1<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//⽆警告</span>
+<span class="token keyword">let</span> <span class="token literal-property property">str2</span><span class="token operator">:</span> any <span class="token operator">=</span> <span class="token string">'hello'</span>
+str2<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//⽆警告</span>
+<span class="token keyword">let</span> <span class="token literal-property property">str3</span><span class="token operator">:</span> unknown <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span>
+str3<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//警告：“str3”的类型为“未知”</span>
+ 
+<span class="token comment">// 使⽤断⾔强制指定str3的类型为string</span>
+<span class="token punctuation">(</span>str3 <span class="token keyword">as</span> string<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//⽆警告</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_4-4-never"><a href="#_4-4-never" class="header-anchor">#</a> 4.4. never</h3> <p><code>never</code> 的含义是：任何值都不是，简⾔之就是不能有值， <code>undefined</code> 、 <code>null</code> 、 <code>''</code> 、 <code>0</code> 都不⾏！</p> <ol><li>⼏乎不⽤ never 去直接限制变量，因为没有意义，例如：</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">/* 指定a的类型为never，那就意味着a以后不能存任何的数据了 */</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> never
+<span class="token comment">// 以下对a的所有赋值都会有警告</span>
+a <span class="token operator">=</span> <span class="token number">1</span>
+a <span class="token operator">=</span> <span class="token boolean">true</span>
+a <span class="token operator">=</span> <span class="token keyword">undefined</span>
+a <span class="token operator">=</span> <span class="token keyword">null</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ol start="2"><li>never ⼀般是 TypeScript 主动推断出来的，例如：</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 指定a的类型为string</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> string
+<span class="token comment">// 给a设置⼀个值</span>
+a <span class="token operator">=</span> <span class="token string">'hello'</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ a<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// TypeScript会推断出此处的a是never，因为没有任何⼀个值符合此处的逻辑</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ol start="3"><li>never 也可⽤于限制函数的返回值</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 限制demo函数不需要有任何返回值，任何值都不⾏，像undeifned、null都不⾏</span>
+<span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>never<span class="token punctuation">{</span>
+ <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'程序异常退出'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_4-5-void"><a href="#_4-5-void" class="header-anchor">#</a> 4.5. void</h3> <p><code>void</code> 的含义是： 空 或 <code>undefined</code> ，严格模式下不能将 <code>null</code> 赋值给 <code>void</code> 类型。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span><span class="token keyword">void</span> <span class="token operator">=</span> <span class="token keyword">undefined</span>
+<span class="token comment">//严格模式下，该⾏会有警告：不能将类型“null”分配给类型“void”</span>
+<span class="token keyword">let</span> <span class="token literal-property property">b</span><span class="token operator">:</span><span class="token keyword">void</span> <span class="token operator">=</span> <span class="token keyword">null</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><code>void</code> 常⽤于限制函数返回值</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// ⽆警告</span>
+<span class="token keyword">function</span> <span class="token function">demo1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// ⽆警告</span>
+<span class="token keyword">function</span> <span class="token function">demo2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">{</span>
+ <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// ⽆警告</span>
+<span class="token keyword">function</span> <span class="token function">demo3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">{</span>
+ <span class="token keyword">return</span> <span class="token keyword">undefined</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 有警告：不能将类型“number”分配给类型“void”</span>
+<span class="token keyword">function</span> <span class="token function">demo4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">{</span>
+ <span class="token keyword">return</span> <span class="token number">666</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="_4-6-object"><a href="#_4-6-object" class="header-anchor">#</a> 4.6. object</h3> <p>关于 <code>Object</code> 与 <code>object</code> ，直接说结论：在类型限制时， <code>Object</code> ⼏乎不⽤，因为范围⼤了，⽆意义。</p> <ol><li><code>object</code> 的含义：任何【⾮原始值类型】，包括：对象、函数、数组等，限制的范围⽐较宽泛，⽤的少。</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span>object <span class="token comment">//a的值可以是任何【⾮原始值类型】，包括：对象、函数、数组等</span>
+<span class="token comment">// 以下代码，是将【⾮原始类型】赋给a，所以均⽆警告</span>
+a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">}</span>
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token function-variable function">a</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// 以下代码，是将【原始类型】赋给a，有警告</span>
+a <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment">// 警告：不能将类型“null”分配给类型“object”</span>
+a <span class="token operator">=</span> <span class="token keyword">undefined</span> <span class="token comment">// 警告：不能将类型“undefined”分配给类型“object”</span>
+a <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment">// 警告：不能将类型“number”分配给类型“object”</span>
+a <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// 警告：不能将类型“boolean”分配给类型“object”</span>
+a <span class="token operator">=</span> <span class="token string">'你好'</span> <span class="token comment">// 警告：不能将类型“string”分配给类型“object”</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ol start="2"><li><code>Object</code> 的含义： <code>Object</code> 的实例对象，限制的范围太⼤了，⼏乎不⽤。</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span>Object <span class="token comment">//a的值必须是Object的实例对象，</span>
+<span class="token comment">// 以下代码，均⽆警告，因为给a赋的值，都是Object的实例对象</span>
+a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">}</span>
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token function-variable function">a</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+a <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment">// 1不是Object的实例对象，但其包装对象是Object的实例</span>
+a <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// truue不是Object的实例对象，但其包装对象是Object的实例</span>
+a <span class="token operator">=</span> <span class="token string">'你好'</span> <span class="token comment">// “你好”不是Object的实例对象，但其包装对象是Object的实例</span>
+<span class="token comment">// 以下代码均有警告</span>
+a <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment">// 警告：不能将类型“null”分配给类型“Object”</span>
+a <span class="token operator">=</span> <span class="token keyword">undefined</span> <span class="token comment">// 警告：不能将类型“undefined”分配给类型“Object”</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ol start="3"><li>实际开发中，限制⼀般对象，通常使⽤以下形式</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 限制person对象的具体内容，使⽤【,】分隔，问号代表可选属性</span>
+<span class="token keyword">let</span> <span class="token literal-property property">person</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">,</span> age<span class="token operator">?</span><span class="token operator">:</span> number<span class="token punctuation">}</span>
+
+<span class="token comment">// 限制car对象的具体内容，使⽤【;】分隔，必须有price和color属性，其他属性不去限制，有没有都⾏</span>
+<span class="token keyword">let</span> <span class="token literal-property property">car</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">price</span><span class="token operator">:</span> number<span class="token punctuation">;</span> color<span class="token operator">:</span> string<span class="token punctuation">;</span> <span class="token punctuation">[</span>k<span class="token operator">:</span>string<span class="token punctuation">]</span><span class="token operator">:</span>any<span class="token punctuation">}</span>
+
+<span class="token comment">// 限制student对象的具体内容，使⽤【回⻋】分隔</span>
+<span class="token keyword">let</span> <span class="token literal-property property">student</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+ <span class="token literal-property property">id</span><span class="token operator">:</span> string
+ <span class="token literal-property property">grade</span><span class="token operator">:</span>number
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 以下代码均⽆警告</span>
+person <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">}</span>
+person <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'李四'</span><span class="token punctuation">}</span>
+car <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token literal-property property">color</span><span class="token operator">:</span><span class="token string">'红⾊'</span><span class="token punctuation">}</span>
+student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token string">'tetqw76te01'</span><span class="token punctuation">,</span><span class="token literal-property property">grade</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><ol start="4"><li>限制函数的参数、返回值，使⽤以下形式</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token function-variable function">demo</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> number<span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> number
+<span class="token function-variable function">demo</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span>y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">return</span> x<span class="token operator">+</span>y
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="5"><li>限制数组，使⽤以下形式</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">arr1</span><span class="token operator">:</span> string<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 该⾏代码等价于： let arr1: Array&lt;string&gt;</span>
+<span class="token keyword">let</span> <span class="token literal-property property">arr2</span><span class="token operator">:</span> number<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 该⾏代码等价于： let arr2: Array&lt;number&gt;</span>
+
+arr1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span>
+arr2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_4-7-tuple"><a href="#_4-7-tuple" class="header-anchor">#</a> 4.7. tuple</h3> <p><code>tuple</code> 就是⼀个⻓度固定的数组。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">t</span><span class="token operator">:</span> <span class="token punctuation">[</span>string<span class="token punctuation">,</span>number<span class="token punctuation">]</span>
+
+t <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token number">123</span><span class="token punctuation">]</span>
+
+<span class="token comment">// 警告，不能将类型“[string, number, boolean]”分配给类型“[string, number]”</span>
+t <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'hello'</span><span class="token punctuation">,</span><span class="token number">123</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_4-8-enum"><a href="#_4-8-enum" class="header-anchor">#</a> 4.8. enum</h3> <p><code>enum</code> 是枚举</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 定义⼀个枚举</span>
+<span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+ Red<span class="token punctuation">,</span>
+ Blue<span class="token punctuation">,</span>
+ Black<span class="token punctuation">,</span>
+ Gold
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 定义⼀个枚举，并指定其初识数值</span>
+<span class="token keyword">enum</span> Color2 <span class="token punctuation">{</span>
+ Red <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">,</span>
+ Blue<span class="token punctuation">,</span>
+ Black<span class="token punctuation">,</span>
+ Gold
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Color<span class="token punctuation">)</span>
+<span class="token comment">/*
+ {
+ 0: 'Red',
+ 1: 'Blue',
+ 2: 'Black',
+ 3: 'Gold',
+ Red: 0,
+ Blue: 1,
+ Black: 2,
+ Gold: 3
+ }
+*/</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Color2<span class="token punctuation">)</span>
+<span class="token comment">/*
+ {
+ 6: 'Red',
+ 7: 'Blue',
+ 8: 'Black',
+ 9: 'Gold',
+ Red: 6,
+ Blue: 7,
+ Black: 8,
+ Gold: 9
+ }
+*/</span>
+
+<span class="token comment">// 定义⼀个phone变量，并设置对⻬进⾏限制</span>
+<span class="token keyword">let</span> <span class="token literal-property property">phone</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span>string<span class="token punctuation">,</span><span class="token literal-property property">price</span><span class="token operator">:</span>number<span class="token punctuation">,</span><span class="token literal-property property">color</span><span class="token operator">:</span>Color<span class="token punctuation">}</span>
+phone <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'华为Mate60'</span><span class="token punctuation">,</span><span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">6500</span><span class="token punctuation">,</span><span class="token literal-property property">color</span><span class="token operator">:</span>Color<span class="token punctuation">.</span>Red<span class="token punctuation">}</span>
+phone <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'iPhone15Pro'</span><span class="token punctuation">,</span><span class="token literal-property property">price</span><span class="token operator">:</span><span class="token number">7999</span><span class="token punctuation">,</span><span class="token literal-property property">color</span><span class="token operator">:</span>Color<span class="token punctuation">.</span>Blue<span class="token punctuation">}</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>phone<span class="token punctuation">.</span>color <span class="token operator">===</span> Color<span class="token punctuation">.</span>Red<span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'⼿机是红⾊的'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div><h2 id="_5-自定义类型"><a href="#_5-自定义类型" class="header-anchor">#</a> 5. ⾃定义类型</h2> <p>⾃定义类型，可以更灵活的限制类型</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 性别的枚举</span>
+<span class="token keyword">enum</span> Gender <span class="token punctuation">{</span>
+ Male<span class="token punctuation">,</span>
+ Female
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ⾃定义⼀个年级类型（⾼⼀、⾼⼆、⾼三）</span>
+type Grade <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">2</span> <span class="token operator">|</span> <span class="token number">3</span>
+
+<span class="token comment">// ⾃定义⼀个学⽣类型</span>
+type Student <span class="token operator">=</span> <span class="token punctuation">{</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span>string<span class="token punctuation">,</span>
+ <span class="token literal-property property">age</span><span class="token operator">:</span>number<span class="token punctuation">,</span>
+ <span class="token literal-property property">gender</span><span class="token operator">:</span>Gender<span class="token punctuation">,</span>
+ <span class="token literal-property property">grade</span><span class="token operator">:</span>Grade
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 定义两个学⽣变量：s1、s2</span>
+<span class="token keyword">let</span> <span class="token literal-property property">s1</span><span class="token operator">:</span>Student
+<span class="token keyword">let</span> <span class="token literal-property property">s2</span><span class="token operator">:</span>Student
+s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token literal-property property">gender</span><span class="token operator">:</span>Gender<span class="token punctuation">.</span>Male<span class="token punctuation">,</span><span class="token literal-property property">grade</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span>
+s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'李四'</span><span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token literal-property property">gender</span><span class="token operator">:</span>Gender<span class="token punctuation">.</span>Female<span class="token punctuation">,</span><span class="token literal-property property">grade</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="_6-抽象类"><a href="#_6-抽象类" class="header-anchor">#</a> 6. 抽象类</h2> <p>常规类：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span> string
+ <span class="token literal-property property">age</span><span class="token operator">:</span> number
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span>string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span>number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+ <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'李四'</span><span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>继承：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// Person类</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// Teacher类继承Person</span>
+<span class="token keyword">class</span> <span class="token class-name">Teacher</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// Student类继承Person</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// Person实例</span>
+<span class="token keyword">const</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'周杰伦'</span><span class="token punctuation">,</span><span class="token number">38</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Student实例</span>
+<span class="token keyword">const</span> s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'张同学'</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> s2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'李同学'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Teacher实例</span>
+<span class="token keyword">const</span> t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Teacher</span><span class="token punctuation">(</span><span class="token string">'刘⽼师'</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> t2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Teacher</span><span class="token punctuation">(</span><span class="token string">'孙⽼师'</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>抽象类：不能去实例化，但可以被别⼈继承，抽象类⾥有抽象⽅法</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// Person（抽象类）</span>
+abstract <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// Teacher类继承Person</span>
+<span class="token keyword">class</span> <span class="token class-name">Teacher</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token comment">// 构造器</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment">// ⽅法</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'你好！我是⽼师:'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Student类继承Person</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>
+
+<span class="token comment">// Person实例</span>
+<span class="token comment">// const p1 = new Person('周杰伦',38) // 由于Person是抽象类，所以此处不可以new Person的实例对象</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_7-接口"><a href="#_7-接口" class="header-anchor">#</a> 7. 接⼝</h2> <p>接⼝梳理：</p> <ol><li>接⼝⽤于限制⼀个类中包含哪些属性和⽅法：</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// Person接⼝</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token comment">// 属性声明</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span> string
+ <span class="token literal-property property">age</span><span class="token operator">:</span> number
+ <span class="token comment">// ⽅法声明</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Teacher实现Person接⼝</span>
+<span class="token keyword">class</span> <span class="token class-name">Teacher</span> <span class="token keyword">implements</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span> string
+ <span class="token literal-property property">age</span><span class="token operator">:</span> number
+ <span class="token comment">// 构造器</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+ <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+ <span class="token punctuation">}</span>
+ <span class="token comment">// ⽅法</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'你好！我是⽼师:'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><ol start="2"><li>接⼝是可以重复声明的：</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// Person接⼝</span>
+<span class="token keyword">interface</span> <span class="token class-name">PersonInter</span> <span class="token punctuation">{</span>
+ <span class="token comment">// 属性声明</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span> string
+ <span class="token literal-property property">age</span><span class="token operator">:</span> number
+<span class="token punctuation">}</span>
+<span class="token comment">// Person接⼝</span>
+<span class="token keyword">interface</span> <span class="token class-name">PersonInter</span> <span class="token punctuation">{</span>
+ <span class="token comment">// ⽅法声明</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Person类继承PersonInter</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token keyword">implements</span> <span class="token class-name">PersonInter</span> <span class="token punctuation">{</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span> string
+ <span class="token literal-property property">age</span><span class="token operator">:</span> number
+ <span class="token comment">// 构造器</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+ <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+ <span class="token punctuation">}</span>
+ <span class="token comment">// ⽅法</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'你好！我是⽼师:'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><ol start="3"><li>【接⼝】与【⾃定义类型】的区别：</li></ol> <blockquote><p>接⼝可以：</p> <ol><li>当⾃定义类型去使⽤；</li> <li>可以限制类的结构；</li></ol></blockquote> <blockquote><p>⾃定义类型：</p> <ol><li>仅仅就是⾃定义类型；</li></ol></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// Person接⼝</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 应该具有的属性</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> string
+    <span class="token literal-property property">age</span><span class="token operator">:</span> number
+    <span class="token comment">// 应该具有的⽅法</span>
+    <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Person类型</span>
+<span class="token comment">/*
+type Person = {
+// 应该具有的属性
+name: string
+age: number
+// 应该具有的⽅法
+speak():void
+}
+*/</span>
+
+<span class="token comment">// 接⼝当成⾃定义类型去使⽤</span>
+<span class="token keyword">let</span> <span class="token literal-property property">person</span><span class="token operator">:</span>Person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span><span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">,</span>
+    <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'你好！'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><ol start="4"><li>【接⼝】与【抽象类】的区别：</li></ol> <blockquote><p>抽象类：</p> <ol><li>可以有普通⽅法，也可以有抽象⽅法；</li> <li>使⽤ extends关键字去继承抽象类；</li></ol></blockquote> <blockquote><p>接⼝中：</p> <ol><li>只能有抽象⽅法；</li> <li>使⽤ implements关键字去实现接⼝</li></ol></blockquote> <p>抽象类举例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 抽象类 —— Person</span>
+abstract <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token comment">// 属性</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span>string
+ <span class="token literal-property property">age</span><span class="token operator">:</span>number
+ <span class="token comment">// 构造器</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span>string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span>number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+ <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+ <span class="token punctuation">}</span>
+ <span class="token comment">// 抽象⽅法</span>
+ abstract <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span>
+ <span class="token comment">// 普通⽅法</span>
+ <span class="token function">walk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我在⾏⾛中....'</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Teacher类继承抽象类Person</span>
+<span class="token keyword">class</span> <span class="token class-name">Teacher</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span>string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span>number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">我是⽼师，我的名字是</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>接⼝举例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 接⼝ —— Person，只能包含抽象⽅法</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token comment">// 属性，不写具体值</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span>string
+ <span class="token literal-property property">age</span><span class="token operator">:</span>number
+ <span class="token comment">// ⽅法，不写具体实现</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 创建Teacher类实现Person接⼝</span>
+<span class="token keyword">class</span> <span class="token class-name">Teacher</span> <span class="token keyword">implements</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+ <span class="token literal-property property">name</span><span class="token operator">:</span>string
+ <span class="token literal-property property">age</span><span class="token operator">:</span>number
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span>string<span class="token punctuation">,</span><span class="token literal-property property">age</span><span class="token operator">:</span>number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+ <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+ <span class="token punctuation">}</span>
+ <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我在⻜快的⾏⾛中......'</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_8-属性修饰符"><a href="#_8-属性修饰符" class="header-anchor">#</a> 8. 属性修饰符</h2> <table><thead><tr><th>readonly</th> <th>只读属性</th> <th>属性⽆法修改</th></tr></thead> <tbody><tr><td>public</td> <td>公开的</td> <td>可以在类、⼦类和对象中修改</td></tr> <tr><td>protected</td> <td>受保护的</td> <td>可以在类、⼦类中修改</td></tr> <tr><td>private</td> <td>私有的</td> <td>可以在类中修改</td></tr></tbody></table> <h2 id="_9-泛型"><a href="#_9-泛型" class="header-anchor">#</a> 9. 泛型</h2> <p>定义⼀个函数或类时，有些情况下⽆法确定其中要使⽤的具体类型（返回值、参数、属性的类型不能确定），此时就需要泛型了</p> <p>举例： <code>&lt;T&gt;</code> 就是泛型，（不⼀定⾮叫 <code>T</code> ），设置泛型后即可在函数中使⽤ <code>T</code>来表示该类型：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> test<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">{</span>
+<span class="token keyword">return</span> arg<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 不指名类型，TS会⾃动推断出来</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token comment">// 指名具体的类型</span>
+test<span class="token operator">&lt;</span>number<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>泛型可以写多个：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> test<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token punctuation">,</span> <span class="token constant">K</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token constant">K</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">K</span><span class="token punctuation">{</span>
+ <span class="token keyword">return</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 为多个泛型指定具体⾃值</span>
+test<span class="token operator">&lt;</span>number<span class="token punctuation">,</span> string<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>类中同样可以使⽤泛型：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">MyClass</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+ <span class="token literal-property property">prop</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">prop</span><span class="token operator">:</span> <span class="token constant">T</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>prop <span class="token operator">=</span> prop<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>也可以对泛型的范围进⾏约束：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">interface</span> <span class="token class-name">Demo</span><span class="token punctuation">{</span>
+ <span class="token literal-property property">length</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 泛型T必须是MyInter的⼦类，即：必须拥有length属性</span>
+<span class="token keyword">function</span> test<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">Demo</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> number<span class="token punctuation">{</span>
+ <span class="token keyword">return</span> arg<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token comment">// 类型“number”的参数不能赋给类型“Demo”的参数</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 类型“{ name: string; }”的参数不能赋给类型“Demo”的参数</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'123'</span><span class="token punctuation">)</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token literal-property property">length</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/xiolblog/assets/js/app.7bdb6cc9.js" defer></script><script src="/xiolblog/assets/js/2.43c78d48.js" defer></script><script src="/xiolblog/assets/js/1.12fb8230.js" defer></script><script src="/xiolblog/assets/js/44.0fc2ba52.js" defer></script>
+  </body>
+</html>
